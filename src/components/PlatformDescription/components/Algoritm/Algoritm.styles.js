@@ -3,12 +3,16 @@ import styled from "styled-components";
 import { AlgoritmIMG2 } from "../../../../imports";
 
 export const Wrap = styled.div`
-  width: 715px;
-  height: 460px;
+  width: 100%;
+  height: 200px;
+  @media (min-width: 992px) {
+    width: 715px;
+    height: 460px;
+  }
 `;
 export const AlgoritmImage = styled.div`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: url(${AlgoritmIMG2});
+  background: url(${AlgoritmIMG2}) no-repeat center / contain;
 `;

@@ -15,7 +15,7 @@ const PlatformDescription = () => {
       <Container>
         <Wrapper>
           <TextBlock>
-            <Title>
+            <Title  fs="35px">
               The future <span>of </span>Cryptocurrency trading{" "}
               <span className="colored">platform</span>
             </Title>
