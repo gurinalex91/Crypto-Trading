@@ -6,8 +6,11 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     flex-direction: row;
+    gap: 20px;
+  }
+  @media (min-width: 992px) {
     gap: 180px;
   }
 `;

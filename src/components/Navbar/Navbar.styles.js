@@ -4,12 +4,10 @@ export const Header = styled.header`
   padding: 22px 0;
   width: 100%;
   transition: all 0.25s linear;
-  @media (max-width: 992px) {
-    overflow: hidden;
-  }
-  @media (min-width: 1700px) {
-    height: 60px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 `;
 
 export const HeaderWrap = styled.div`

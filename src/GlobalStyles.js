@@ -66,6 +66,9 @@ table {
     text-decoration: none;
     color: #ffffff;
   }
+  html, body {
+    scroll-behavior: smooth;
+}
 `;
 export const Background = styled.div`
   @media (min-width: 992px) {

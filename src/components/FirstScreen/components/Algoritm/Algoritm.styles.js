@@ -9,7 +9,7 @@ export const Wrap = styled.div`
     width: 615px;
     height: 435px;
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 0;
   }
 `;

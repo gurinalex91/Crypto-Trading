@@ -5,12 +5,12 @@ import { FsBg } from "../../imports";
 
 export const Wrapper = styled.div`
   width: 100%;
-  margin: 0 auto;
-  background: url(${FsBg}) no-repeat center / cover;
+  padding-top: 80px;
+  margin-top: 60px;
+  background: url(${FsBg}) no-repeat top / 90% 90%;
   position: relative;
   @media (min-width: 992px) {
     height: 100vh;
-    min-height: 670px;
   }
 `;
 export const TextBlock = styled.div`
@@ -70,7 +70,7 @@ export const MainButton = styled(Button)`
   position: relative;
   margin: 40px auto;
   @media (min-width: 992px) {
-    margin: 94px auto;
+    margin: 94px auto 80px;
   }
   &::before {
     content: "";
@@ -106,7 +106,7 @@ export const MainButton = styled(Button)`
 
 export const MouseIcoWrapper = styled.div`
   display: none;
-  @media (min-width: 992px) {
+  @media (min-width: 1440px) {
     display: block;
     text-align: center;
     & svg {
