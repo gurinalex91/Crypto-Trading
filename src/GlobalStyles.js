@@ -59,6 +59,8 @@ table {
   }
   button {
     font-family: Mazzard L, Open-Sans, Helvetica, Sans-Serif;
+    border: none;
+    outline: none;
   }
   a {
     text-decoration: none;
@@ -66,65 +68,71 @@ table {
   }
 `;
 export const Background = styled.div`
-  position: relative;
-  overflow: hidden;
-  background-image: url(${RingsBg}),
-    radial-gradient(
-      ellipse 700px 600px at top left,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      ellipse 700px 600px,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      ellipse 250px 250px,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      ellipse 500px 280px,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      ellipse 265px 265px,
-      rgba(255, 255, 255, 0.08) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      ellipse 920px 580px,
-      rgba(255, 255, 255, 0.3) 0%,
-      transparent 100%
-    );
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
-    no-repeat, no-repeat;
-  background-position: right center, left top, right -25rem top -75rem,
-    right -37rem top 15rem, center top 35rem, left -37rem top 45rem,
-    left -30rem bottom -120rem;
+  @media (min-width: 992px) {
+    position: relative;
+    overflow: hidden;
+    background-image: url(${RingsBg}),
+      radial-gradient(
+        ellipse 700px 600px at top left,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 700px 600px,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 250px 250px,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 500px 280px,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 265px 265px,
+        rgba(255, 255, 255, 0.08) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 920px 580px,
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 100%
+      );
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+      no-repeat, no-repeat;
+    background-position: right center, left top, right -25rem top -75rem,
+      right -37rem top 15rem, center top 35rem, left -37rem top 45rem,
+      left -30rem bottom -120rem;
+  }
 `;
 /*blue gradient*/
 export const DecorationRight = styled.div`
-  width: 1180px;
-  height: 700px;
-  border-radius: 350px;
-  position: absolute;
-  top: 22rem;
-  right: -35rem;
-  transform: rotate(-45deg);
-  background: radial-gradient(
-      50% 50%,
-      rgba(0, 65, 218, 0.115) 0%,
-      rgba(40, 0, 153, 0.115) 70%,
-      transparent 100%
-    )
-    no-repeat;
+  @media (min-width: 992px) {
+    width: 1180px;
+    height: 700px;
+    border-radius: 350px;
+    position: absolute;
+    top: 22rem;
+    right: -35rem;
+    transform: rotate(-45deg);
+    background: radial-gradient(
+        50% 50%,
+        rgba(0, 65, 218, 0.115) 0%,
+        rgba(40, 0, 153, 0.115) 70%,
+        transparent 100%
+      )
+      no-repeat;
+  }
 `;
 export const DecorationLeft = styled(DecorationRight)`
-  top: 80rem;
-  left: -15rem;
+  @media (min-width: 992px) {
+    top: 80rem;
+    left: -15rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -151,11 +159,16 @@ export const SectionTitle = styled.h2`
   text-transform: uppercase;
   color: #aaaaaa;
   font-weight: 500;
-  font-size: ${(props) => props.fs || "1.2rem"};
-  line-height: 23px;
-  margin: ${(props) => props.marg};
-  text-align: ${(props) => props.textAlign};
-  padding: ${(props) => props.padd};
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  @media (min-width: 992px) {
+    font-size: ${(props) => props.fs || "1.2rem"};
+    line-height: 23px;
+    margin: ${(props) => props.marg};
+    text-align: ${(props) => props.textAlign};
+    padding: ${(props) => props.padd};
+  }
 `;
 
 export const Text = styled.p`

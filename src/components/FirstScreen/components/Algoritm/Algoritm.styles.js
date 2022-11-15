@@ -3,21 +3,31 @@ import styled from "styled-components";
 import { AlgoritmIMG } from "../../../../imports";
 
 export const Wrap = styled.div`
-  width: 615px;
-  height: 435px;
-  /* background: radial-gradient(
-    54.37% 54.37% at 53.26% 42.18%,
-    #40539d 0%,
-    rgba(96, 92, 255, 0) 100%
-  );
-  backdrop-filter: blur(4.5px); */
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 100%;
+  height: 270px;
+  @media (min-width: 992px) {
+    width: 615px;
+    height: 435px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 `;
 export const AlgoritmImage = styled.div`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: url(${AlgoritmIMG});
+  background-image: url(${AlgoritmIMG});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 60px center;
+  @media (min-width: 425px) {
+   background-position: 120px center;
+  }
+  @media (min-width: 576px) {
+   background-position: 290px center;
+  }
+  @media (min-width: 768px) {
+   background-position: center;
+  }
 `;

@@ -4,7 +4,7 @@ import { MouseIco } from "../../imports";
 import Algoritm from "./components/Algoritm/Algoritm";
 
 import {
-  Background,
+  Wrapper,
   MainTitle,
   MainText,
   TextBlock,
@@ -15,13 +15,14 @@ import {
 
 const FirstScreen = () => {
   return (
-    <Background>
+    <Wrapper>
       <Container>
-        <SectionTitle marg="0 0 32px 0">crypto trading</SectionTitle>
+        <SectionTitle marg="0 0 32px 0" textAlign="left">
+          crypto trading
+        </SectionTitle>
         <TextBlock>
           <MainTitle>
-            Engineers Meet
-            <br />
+            Engineers Meet{" "}
             <span>Traders __</span>
           </MainTitle>
           <MainText>
@@ -37,7 +38,7 @@ const FirstScreen = () => {
           <MouseIco />
         </MouseLink>
       </MouseIcoWrapper>
-    </Background>
+    </Wrapper>
   );
 };
 export default FirstScreen;

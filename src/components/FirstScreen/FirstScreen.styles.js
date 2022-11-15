@@ -3,25 +3,27 @@ import styled from "styled-components";
 import { Text, Button } from "../../GlobalStyles";
 import { FsBg } from "../../imports";
 
-export const Background = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  background: url(${FsBg}) no-repeat;
+  background: url(${FsBg}) no-repeat center / cover;
   position: relative;
-  height: 100vh;
-  min-height: 670px;
+  @media (min-width: 992px) {
+    height: 100vh;
+    min-height: 670px;
+  }
 `;
 export const TextBlock = styled.div`
-  @media (min-width: 768px) {
-    padding-right: 600px;
+  @media (min-width: 992px) {
+    padding-right: 570px;
   }
 `;
 export const MainTitle = styled.h1`
   font-weight: 600;
-  font-size: 6rem;
-  line-height: 90px;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  margin-bottom: 32px;
+  font-size: 3rem;
+  line-height: 61px;
+  text-align: center;
+  margin-bottom: 20px;
   span {
     background: linear-gradient(
       89.95deg,
@@ -35,17 +37,41 @@ export const MainTitle = styled.h1`
     text-fill-color: transparent;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
   }
+  @media (min-width: 576px) {
+    font-size: 3.25rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 6rem;
+    line-height: 90px;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 32px;
+    text-align: left;
+  }
 `;
 
 export const MainText = styled(Text)`
-  font-size: 1.6rem;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 140%;
+  text-align: center;
+  padding: 0 3rem;
+  @media (min-width: 768px) {
+    padding: 0 6rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 1.6rem;
+    line-height: 30px;
+    text-align: left;
+    padding: 0;
+  }
 `;
 
 export const MainButton = styled(Button)`
   padding: 24px 90px 24px 30px;
   position: relative;
-  margin: 94px auto;
+  margin: 40px auto;
+  @media (min-width: 992px) {
+    margin: 94px auto;
+  }
   &::before {
     content: "";
     width: 24px;
@@ -69,27 +95,31 @@ export const MainButton = styled(Button)`
     transform: rotate(45deg);
     transition: all 0.3s linear;
   }
-  &:hover::before{
+  &:hover::before {
     background: #1556ee;
   }
-  &:hover::after{
+  &:hover::after {
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
   }
 `;
 
 export const MouseIcoWrapper = styled.div`
-  text-align: center;
-  & svg {
-    path,
-    rect {
-      transition: all ease-in-out 0.3s;
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+    text-align: center;
+    & svg {
+      path,
+      rect {
+        transition: all ease-in-out 0.3s;
+      }
     }
-  }
-  & svg:hover {
-    path,
-    rect {
-      stroke: #1556ee;
+    & svg:hover {
+      path,
+      rect {
+        stroke: #1556ee;
+      }
     }
   }
 `;
