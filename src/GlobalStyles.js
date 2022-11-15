@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+import RingsBg from "./images/rings-bg.svg";
+
 const GlobalStyle = createGlobalStyle`
 /* reset */
 html, body, div, span, applet, object, iframe,
@@ -59,6 +61,68 @@ table {
     text-decoration: none;
   }
 `;
+export const Background = styled.div`
+  position: relative;
+  overflow: hidden;
+  background-image: url(${RingsBg}),
+    radial-gradient(
+      ellipse 700px 600px at top left,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 700px 600px,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 250px 250px,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 500px 280px,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 265px 265px,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 920px 580px,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    );
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat;
+  background-position: right center, left top, right -25rem top -75rem,
+    right -37rem top 15rem, center top 35rem, left -37rem top 45rem,
+    left -30rem bottom -120rem;
+`;
+/*blue gradient*/
+export const DecorationRight = styled.div`
+  width: 1180px;
+  height: 700px;
+  border-radius: 350px;
+  position: absolute;
+  top: 22rem;
+  right: -35rem;
+  transform: rotate(-45deg);
+  background: radial-gradient(
+      50% 50%,
+      rgba(0, 65, 218, 0.115) 0%,
+      rgba(40, 0, 153, 0.115) 70%,
+      transparent 100%
+    )
+    no-repeat;
+`;
+export const DecorationLeft = styled(DecorationRight)`
+  top: 80rem;
+  left: -15rem;
+`;
+
 export const Container = styled.div`
   z-index: 99;
   width: 100%;
