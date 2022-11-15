@@ -16,7 +16,6 @@ export const Content = styled.div`
 `;
 
 export const ImageBlock = styled.div`
-  width: 100%;
   img {
     width: 100%;
     height: 100%;
