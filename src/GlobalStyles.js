@@ -150,7 +150,14 @@ export const Container = styled.div`
 `;
 
 export const SectionWrap = styled.div`
+  padding: 40px 0;
+  @media (min-width: 576px) {
+    padding: 50px 0;
+  }
   @media (min-width: 768px) {
+    padding: 70px 0;
+  }
+  @media (min-width: 992px) {
     padding: 90px 0;
   }
 `;
@@ -198,7 +205,7 @@ export const Button = styled.button`
 
 export const Title = styled.h3`
   font-weight: 500;
-  font-size: 40px;
+  font-size: ${(props) => props.fs};
   line-height: 120%;
   text-align: ${(props) => props.textAlign};
   margin: ${(props) => props.marg};
@@ -216,6 +223,9 @@ export const Title = styled.h3`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+  }
+  @media (min-width: 992px) {
+    font-size: 40px;
   }
 `;
 

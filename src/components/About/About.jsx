@@ -26,7 +26,7 @@ const About = () => {
         <SectionTitle fs="15px" textAlign="center" padd="10px 0 0 0">
           about us
         </SectionTitle>
-        <Title textAlign="center" marg="20px 0 65px 0">
+        <Title textAlign="center" marg="20px 0 65px 0" fs="44px">
           Global technologies
         </Title>
         <Content>
