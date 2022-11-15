@@ -15,41 +15,46 @@ export const GradientLayer = styled.div`
   flex-direction: column;
   gap: 60px;
   background: radial-gradient(
-        circle at top left,
+        ellipse 180px 90px at top left,
         rgba(255, 255, 255, 0.1) 0%,
         rgba(196, 196, 196, 0) 100%
       )
       left 0 top 0,
     radial-gradient(
-        circle at right bottom,
+        ellipse 180px 90px at right bottom,
         rgba(255, 255, 255, 0.1) 0%,
         rgba(196, 196, 196, 0) 100%
       )
-      bottom 0 right 0;
-  background-size: 60% 50%;
+      bottom 50px right 0,
+    radial-gradient(
+        circle at bottom right,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(196, 196, 196, 0) 100%
+      )
+      bottom 50px right 0;
   background-repeat: no-repeat;
 `;
 export const Card = styled.div`
   border: 2px solid rgba(211, 211, 211, 0.35);
   border-radius: 46px;
   overflow: hidden;
+  background-color: #000;
   &.first {
     grid-row-start: 1;
     grid-row-end: 3;
     ${GradientLayer} {
       background: radial-gradient(
-            circle at top left,
+            ellipse 260px 170px at top left,
             rgba(255, 255, 255, 0.1) 0%,
             rgba(196, 196, 196, 0) 100%
           )
-          left -30px top -200px,
+          left top,
         radial-gradient(
-            circle at right bottom,
+            ellipse 260px 170px at right bottom,
             rgba(255, 255, 255, 0.1) 0%,
             rgba(196, 196, 196, 0) 100%
           )
-          bottom 160px right -45px;
-      background-size: 110% 50%;
+          bottom 350px right;
       background-repeat: no-repeat;
       padding-top: 350px;
       margin-top: -510px;
@@ -61,19 +66,25 @@ export const Card = styled.div`
     background: url(${CardBG2}) no-repeat right top;
     ${GradientLayer} {
       background: radial-gradient(
-            circle at top left,
+            ellipse 375px 75px at top,
             rgba(255, 255, 255, 0.1) 0%,
             rgba(196, 196, 196, 0) 100%
           )
-          left 0 top 0,
+          left -15rem top 0,
         radial-gradient(
-            circle at right bottom,
+            ellipse 375px 75px at bottom,
             rgba(255, 255, 255, 0.1) 0%,
             rgba(196, 196, 196, 0) 100%
           )
-          bottom 0 right 0;
-      background-size: 50% 100%;
+          right -15rem bottom 50px,
+        radial-gradient(
+            ellipse 210px 175px at bottom right,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(196, 196, 196, 0) 100%
+          )
+          bottom 60px right 0;
       background-repeat: no-repeat;
+    }
   }
 `;
 

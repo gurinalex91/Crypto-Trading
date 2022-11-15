@@ -10,7 +10,6 @@ import {
 
 import { Container, SectionWrap, Title } from "../../GlobalStyles";
 import CardBG1 from "../../images/bg_card1.png";
-import CardBG2 from "../../images/bg_card2.png";
 
 const CardsSection = () => {
   return (
@@ -22,7 +21,7 @@ const CardsSection = () => {
             <GradientLayer>
               <CardTitle>Spot & Margin</CardTitle>
               <Title>
-                Trade <span className="colored">200+ </span>pairs with up to 10x
+                Trade <span className="colored">200+ </span> <br/>pairs with up<br/> to 10x
                 leverage
               </Title>
               <CardLink href="#">Learn more</CardLink>
