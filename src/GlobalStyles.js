@@ -29,6 +29,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+*{
+  box-sizing: border-box;
+}
 body {
 	line-height: 1;
 }
@@ -127,10 +130,14 @@ export const DecorationLeft = styled(DecorationRight)`
 export const Container = styled.div`
   z-index: 99;
   width: 100%;
-  max-width: 1170px;
   margin: 0 auto;
+  padding: 0 1rem;
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
   @media (min-width: 1700px) {
     max-width: 105rem;
+    padding: 0;
   }
 `;
 

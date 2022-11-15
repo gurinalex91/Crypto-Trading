@@ -12,12 +12,12 @@ export const StyledBurger = styled.div`
   position: absolute;
   top: calc(50% - 16px);
   right: 20px;
-  z-index: 2;
-  display: none;
-  @media (max-width: 992px) {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+  z-index: 200;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    display: none;
   }
   div {
     width: 2rem;
@@ -36,17 +36,18 @@ export const StyledBurger = styled.div`
 `;
 
 export const Navigation = styled.div`
-  display: none;
-  @media (max-width: 992px) {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    right: 0;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  @media (min-width: 992px) {
+    display: none;
   }
 `;
 export const Blur = styled.div`
@@ -73,6 +74,7 @@ export const NavigationMenu = styled.ul`
   @media (min-width: 576px) {
     width: 50%;
     align-items: flex-start;
+    padding-left: 10px;
   }
   @media (min-width: 768px) {
     width: 30%;

@@ -2,16 +2,8 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   padding: 22px 0;
-  position: sticky;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.8);
   transition: all 0.25s linear;
-  &:hover{
-    background: rgba(0, 0, 0, 1);
-  }
   @media (max-width: 992px) {
     overflow: hidden;
   }
@@ -25,6 +17,7 @@ export const HeaderWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  position: relative;
 `;
 export const LogoHovered = styled.span`
   text-transform: uppercase;
@@ -96,7 +89,7 @@ export const StyledLink = styled.a`
 `;
 
 export const StyledLinkBtn = styled(StyledLink)`
-  padding: 18px 43px;
+  padding: 5px 15px;
   color: #000;
   display: flex;
   align-items: center;
@@ -108,6 +101,9 @@ export const StyledLinkBtn = styled(StyledLink)`
   box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
   border-radius: 10px;
   transition: all 0.3s linear;
+  @media (min-width: 992px) {
+    padding: 18px 43px;
+  }
   & svg {
     path {
       transition: all ease-in-out 0.3s;
