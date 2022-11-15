@@ -59,6 +59,7 @@ table {
   }
   a {
     text-decoration: none;
+    color: #ffffff;
   }
 `;
 export const Background = styled.div`

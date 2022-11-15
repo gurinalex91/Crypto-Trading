@@ -13,7 +13,7 @@ export const GradientLayer = styled.div`
   padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 45px;
   background: radial-gradient(
         ellipse 180px 90px at top left,
         rgba(255, 255, 255, 0.1) 0%,
@@ -34,11 +34,22 @@ export const GradientLayer = styled.div`
       bottom 50px right 0;
   background-repeat: no-repeat;
 `;
-export const Card = styled.div`
+
+export const CardLink = styled.a`
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #aaaaaa;
+  transition: all 0.2s linear;
+  width: fit-content;
+`;
+
+export const Card = styled.a`
   border: 2px solid rgba(211, 211, 211, 0.35);
   border-radius: 46px;
   overflow: hidden;
   background-color: #000;
+  transition: all 0.2s ease-out;
   &.first {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -86,6 +97,17 @@ export const Card = styled.div`
       background-repeat: no-repeat;
     }
   }
+  &:hover {
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    border: 1px solid #cccccc;
+    color: #3e53f8;
+    ${CardLink} {
+      color: #ffffff;
+      font-size: 17px;
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const CardTitle = styled.div`
@@ -94,18 +116,4 @@ export const CardTitle = styled.div`
   line-height: 18px;
   text-transform: uppercase;
   color: #aaaaaa;
-`;
-
-export const CardLink = styled.a`
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  color: #aaaaaa;
-  transition: all 0.3s linear;
-  width: fit-content;
-  &:hover {
-    color: #ffffff;
-    font-size: 17px;
-    text-decoration: underline;
-  }
 `;
