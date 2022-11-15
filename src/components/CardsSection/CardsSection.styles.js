@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
 import CardBG1 from "../../images/bg_card1.png";
+import CardBGMobile from "../../images/bg_card1_mobile.png";
 import CardBG2 from "../../images/bg_card2.png";
 
 export const CardsWraper = styled.div`
-  @media (min-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @media (min-width: 576px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  @media (min-width: 769px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -50,9 +59,7 @@ export const Card = styled.a`
       bottom right;
   background-repeat: no-repeat;
   &.first {
-    display: flex;
-    flex-direction: column;
-    background: url(${CardBG1}) top,
+    background: url(${CardBGMobile}) bottom / contain,
       radial-gradient(
           ellipse 260px 170px at top left,
           rgba(255, 255, 255, 0.1) 0%,
@@ -66,22 +73,22 @@ export const Card = styled.a`
         )
         bottom right;
     background-repeat: no-repeat;
-    padding-top: 350px;
+    padding: 30px 30px 240px;
   }
   &.last {
-    background: url(${CardBG2}) right top,
+    background: url(${CardBG2}) 70px 220px,
       radial-gradient(
           ellipse 375px 75px at top,
           rgba(255, 255, 255, 0.1) 0%,
           rgba(196, 196, 196, 0) 100%
         )
-        left -15rem top,
+        left 0 top,
       radial-gradient(
           ellipse 375px 75px at bottom,
           rgba(255, 255, 255, 0.1) 0%,
           rgba(196, 196, 196, 0) 100%
         )
-        right -15rem bottom,
+        right 0 bottom,
       radial-gradient(
           ellipse 210px 175px at bottom right,
           rgba(255, 255, 255, 0.1) 0%,
@@ -89,15 +96,40 @@ export const Card = styled.a`
         )
         bottom right;
     background-repeat: no-repeat;
+    padding: 30px 30px 190px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
+    &.first {
+      padding: 30px 30px 190px;
+    }
+  }
+  @media (min-width: 769px) {
     &.first {
       grid-row-start: 1;
       grid-row-end: 3;
+      padding: 350px 30px 30px;
+      background: url(${CardBG1}) top,
+        radial-gradient(
+            ellipse 260px 170px at top left,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(196, 196, 196, 0) 100%
+          )
+          left top,
+        radial-gradient(
+            ellipse 260px 170px at right bottom,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(196, 196, 196, 0) 100%
+          )
+          bottom right;
+      background-repeat: no-repeat;
     }
     &.last {
+      background-position: right top, left -15rem top, right -15rem bottom,
+        bottom right;
       grid-column-start: 2;
       grid-column-end: 4;
+      background-repeat: no-repeat;
+      padding: 30px;
     }
   }
   &:hover {

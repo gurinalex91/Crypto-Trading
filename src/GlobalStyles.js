@@ -205,7 +205,7 @@ export const Button = styled.button`
 
 export const Title = styled.h3`
   font-weight: 500;
-  font-size: ${(props) => props.fs};
+  font-size: ${(props) => props.fs || "2rem"};
   line-height: 120%;
   text-align: ${(props) => props.textAlign};
   margin: ${(props) => props.marg};
