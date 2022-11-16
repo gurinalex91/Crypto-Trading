@@ -73,6 +73,7 @@ export const Card = styled.a`
         )
         bottom right;
     background-repeat: no-repeat;
+    background-color: #000;
     padding: 30px 30px 240px;
   }
   &.last {
@@ -96,6 +97,7 @@ export const Card = styled.a`
         )
         bottom right;
     background-repeat: no-repeat;
+    background-color: #000;
     padding: 30px 30px 190px;
   }
   @media (min-width: 576px) {

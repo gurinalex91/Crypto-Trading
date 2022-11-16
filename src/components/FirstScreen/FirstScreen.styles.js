@@ -6,11 +6,12 @@ import { FsBg } from "../../imports";
 export const Wrapper = styled.div`
   width: 100%;
   padding-top: 80px;
-  margin-top: 60px;
-  background: url(${FsBg}) no-repeat top / 90% 90%;
+  background: url(${FsBg}) no-repeat center;
   position: relative;
   @media (min-width: 992px) {
+    margin-top: 60px;
     height: 100vh;
+    background: url(${FsBg}) no-repeat top / 90% 90%;
   }
 `;
 export const TextBlock = styled.div`

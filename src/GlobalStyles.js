@@ -71,9 +71,70 @@ table {
 }
 `;
 export const Background = styled.div`
+  position: relative;
+  overflow: hidden;
+  background-image: url(${RingsBg}),
+    radial-gradient(
+      ellipse 370px 300px at top left,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 490px 400px at right,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 180px 180px at right,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 170px 170px at left,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    );
+  background-position: right -45rem top 40rem, left top, right top -105rem,
+    right top -30rem, left top 25rem;
+  background-repeat: no-repeat;
   @media (min-width: 992px) {
-    position: relative;
-    overflow: hidden;
+    background-image: url(${RingsBg}),
+      radial-gradient(
+        ellipse 700px 600px at top left,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 400px 300px,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 250px 250px,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 500px 280px,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 265px 265px,
+        rgba(255, 255, 255, 0.08) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 920px 580px,
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 100%
+      );
+
+    background-position: right center, left top, right -25rem top -75rem,
+      right -37rem top 15rem, center top 35rem, left -37rem top 45rem,
+      left -30rem bottom -120rem;
+  }
+  @media (min-width: 1400px) {
     background-image: url(${RingsBg}),
       radial-gradient(
         ellipse 700px 600px at top left,
@@ -105,22 +166,39 @@ export const Background = styled.div`
         rgba(255, 255, 255, 0.3) 0%,
         transparent 100%
       );
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
-      no-repeat, no-repeat;
-    background-position: right center, left top, right -25rem top -75rem,
-      right -37rem top 15rem, center top 35rem, left -37rem top 45rem,
-      left -30rem bottom -120rem;
   }
 `;
 /*blue gradient*/
-export const DecorationRight = styled.div`
+export const DecorationMobile = styled.div`
+  width: ${(props) => props.w || "480px"};
+  height: ${(props) => props.h || "280px"};
+  border-radius: 270px;
+  position: absolute;
+  top: ${(props) => props.top};
+  right: ${(props) => props.right};
+  transform: rotate(-45deg);
+  background: radial-gradient(
+      50% 50%,
+      rgba(0, 65, 218, 0.115) 0%,
+      rgba(40, 0, 153, 0.115) 70%,
+      transparent 100%
+    )
+    no-repeat;
   @media (min-width: 992px) {
+    display: none;
+  }
+`;
+
+export const Decoration = styled.div`
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
     width: 1180px;
     height: 700px;
     border-radius: 350px;
     position: absolute;
-    top: 22rem;
-    right: -35rem;
+    top: ${(props) => props.top};
+    right: ${(props) => props.right};
     transform: rotate(-45deg);
     background: radial-gradient(
         50% 50%,
@@ -129,12 +207,6 @@ export const DecorationRight = styled.div`
         transparent 100%
       )
       no-repeat;
-  }
-`;
-export const DecorationLeft = styled(DecorationRight)`
-  @media (min-width: 992px) {
-    top: 80rem;
-    left: -15rem;
   }
 `;
 
