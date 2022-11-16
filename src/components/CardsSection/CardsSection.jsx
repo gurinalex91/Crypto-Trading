@@ -21,12 +21,12 @@ const CardsSection = () => {
                 pairs with up
                 <br /> to 10x leverage
               </Title>
-              <CardLink href="#">Learn more</CardLink>
+              <CardLink>Learn more</CardLink>
           </Card>
           <Card href="#">
               <CardTitle>Derivatives</CardTitle>
               <Title>40+ quarterly futures and contracts</Title>
-              <CardLink href="#">Learn more</CardLink>
+              <CardLink>Learn more</CardLink>
           </Card>
           <Card href="#">
               <CardTitle>Trading Arena</CardTitle>
@@ -36,7 +36,7 @@ const CardsSection = () => {
                 worth up to
                 <br /> USD 1,000,000
               </Title>
-              <CardLink href="#">Learn more</CardLink>
+              <CardLink>Learn more</CardLink>
           </Card>
           <Card className="last" href="#">
               <CardTitle>mobile app</CardTitle>
@@ -44,7 +44,7 @@ const CardsSection = () => {
                 Trade anytime, <br />
                 anywhere
               </Title>
-              <CardLink href="#">Learn more</CardLink>
+              <CardLink>Learn more</CardLink>
           </Card>
         </CardsWraper>
       </Container>

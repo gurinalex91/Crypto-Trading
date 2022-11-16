@@ -20,7 +20,7 @@ export const CardsWraper = styled.div`
   }
 `;
 
-export const CardLink = styled.a`
+export const CardLink = styled.span`
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
