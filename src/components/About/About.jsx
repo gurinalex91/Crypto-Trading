@@ -21,7 +21,13 @@ import Сhart from "../../images/chart.png";
 
 const About = () => {
   return (
-    <SectionWrap id="about">
+    <SectionWrap
+      id="about"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
       <Container>
         <SectionTitle fs="15px" textAlign="center" padd="10px 0 0 0">
           about us
@@ -30,10 +36,20 @@ const About = () => {
           Global technologies
         </Title>
         <Content>
-          <ImageBlock>
+          <ImageBlock
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            viewport={{ once: true }}
+          >
             <img src={Сhart} alt="" />
           </ImageBlock>
-          <TextBlock>
+          <TextBlock
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Heading>Level 1</Heading>
             <Wrapper>
               <TextDecor />
@@ -50,7 +66,13 @@ const About = () => {
                 executed.
               </Text>
             </Wrapper>
-            <Button>Start Now</Button>
+            <Button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Start Now
+            </Button>
           </TextBlock>
         </Content>
       </Container>

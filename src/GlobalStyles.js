@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { motion } from "framer-motion";
 
 import RingsBg from "./images/rings-bg.svg";
 
@@ -224,7 +225,7 @@ export const Container = styled.div`
   }
 `;
 
-export const SectionWrap = styled.div`
+export const SectionWrap = styled(motion.div)`
   padding: 40px 0;
   @media (min-width: 576px) {
     padding: 50px 0;
@@ -260,7 +261,7 @@ export const Text = styled.p`
   color: #e9e9e9;
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   display: block;
   padding: 20px 60px;
   background: linear-gradient(140.6deg, #3e6ff9 -27.18%, #3e53f8 126.06%);

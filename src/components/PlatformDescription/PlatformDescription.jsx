@@ -11,11 +11,16 @@ import {
 
 const PlatformDescription = () => {
   return (
-    <SectionWrap>
+    <SectionWrap
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.5, duration: 1 }}
+    >
       <Container>
         <Wrapper>
           <TextBlock>
-            <Title  fs="35px">
+            <Title fs="35px">
               The future <span>of </span>Cryptocurrency trading{" "}
               <span className="colored">platform</span>
             </Title>

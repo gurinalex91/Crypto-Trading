@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 import { Triangle1, Triangle2 } from "../../imports";
@@ -15,7 +16,7 @@ export const Content = styled.div`
   }
 `;
 
-export const ImageBlock = styled.div`
+export const ImageBlock = styled(motion.div)`
   img {
     width: 100%;
     height: 100%;
@@ -23,7 +24,7 @@ export const ImageBlock = styled.div`
   }
 `;
 
-export const TextBlock = styled.div`
+export const TextBlock = styled(motion.div)`
   flex-shrink: 2;
   @media (min-width: 992px) {
     max-width: 370px;

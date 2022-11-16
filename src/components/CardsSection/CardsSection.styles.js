@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 import CardBG1 from "../../images/bg_card1.png";
@@ -29,7 +30,7 @@ export const CardLink = styled.span`
   width: fit-content;
 `;
 
-export const Card = styled.a`
+export const Card = styled(motion.a)`
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -135,10 +136,11 @@ export const Card = styled.a`
     }
   }
   &:hover {
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
     transform: translateY(-4px);
     border: 1px solid #cccccc;
     color: #3e53f8;
+    box-shadow: 0px 0px 999px 999px rgba(0, 0, 0, 0.7);
+    z-index: 1;
     ${CardLink} {
       color: #ffffff;
       font-size: 17px;

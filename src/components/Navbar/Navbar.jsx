@@ -18,7 +18,6 @@ import { LinkArrow } from "../../imports";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 66) {
       setNavbar(true);
     } else {
@@ -31,7 +30,11 @@ const Navbar = () => {
   });
 
   return (
-    <Header className={navbar ? "active" : ""}>
+    <Header
+      className={navbar ? "active" : ""}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Container>
         <HeaderWrap>
           <Logo href="/">

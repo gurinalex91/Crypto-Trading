@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
   padding: 22px 0;
   width: 100%;
   transition: all 0.25s linear;
@@ -8,6 +9,7 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 10;
+  opacity: 0;
   &.active{
     background: #000;
     padding: 10px;

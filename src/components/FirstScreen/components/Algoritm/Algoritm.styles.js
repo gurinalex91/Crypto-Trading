@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 import { AlgoritmIMG } from "../../../../imports";
 
-export const Wrap = styled.div`
+export const Wrap = styled(motion.div)`
   width: 100%;
   height: 270px;
   @media (min-width: 992px) {

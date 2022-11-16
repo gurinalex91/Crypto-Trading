@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 import { Text, Button } from "../../GlobalStyles";
@@ -14,7 +15,7 @@ export const Wrapper = styled.div`
     background: url(${FsBg}) no-repeat top / 90% 90%;
   }
 `;
-export const TextBlock = styled.div`
+export const TextBlock = styled(motion.div)`
   @media (min-width: 992px) {
     padding-right: 570px;
   }
@@ -105,7 +106,7 @@ export const MainButton = styled(Button)`
   }
 `;
 
-export const MouseIcoWrapper = styled.div`
+export const MouseIcoWrapper = styled(motion.div)`
   display: none;
   @media (min-width: 1440px) {
     display: block;
