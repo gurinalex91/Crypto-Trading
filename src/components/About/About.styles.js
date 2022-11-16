@@ -24,6 +24,7 @@ export const ImageBlock = styled.div`
 `;
 
 export const TextBlock = styled.div`
+  flex-shrink: 2;
   @media (min-width: 992px) {
     max-width: 370px;
     padding-top: 43px;
