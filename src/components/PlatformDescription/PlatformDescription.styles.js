@@ -7,7 +7,7 @@ export const TextBlock = styled.div`
   padding-top: 55px;
   @media (min-width: 992px) {
     order: 2;
-    flex: 0 0 40%;
+    flex: 0 0 30%;
   }
 `;
 export const ImageBlock = styled.div`

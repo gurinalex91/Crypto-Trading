@@ -37,7 +37,6 @@ export const Card = styled.a`
   border: 2px solid rgba(211, 211, 211, 0.35);
   border-radius: 46px;
   overflow: hidden;
-  background-color: #000;
   transition: all 0.2s ease-out;
   background: radial-gradient(
         ellipse 180px 90px at top left,
@@ -58,6 +57,7 @@ export const Card = styled.a`
       )
       bottom right;
   background-repeat: no-repeat;
+  background-color: #000;
   &.first {
     background: url(${CardBGMobile}) bottom / contain,
       radial-gradient(
