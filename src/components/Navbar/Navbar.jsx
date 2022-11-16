@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "../../GlobalStyles";
 
 import Burger from "./Burger";
@@ -16,8 +16,22 @@ import {
 import { LinkArrow } from "../../imports";
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false);
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 66) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  useEffect(() => {
+    changeBackground();
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <Header>
+    <Header className={navbar ? "active" : ""}>
       <Container>
         <HeaderWrap>
           <Logo href="/">

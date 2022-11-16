@@ -8,6 +8,10 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 10;
+  &.active{
+    background: #000;
+    padding: 10px;
+  }
 `;
 
 export const HeaderWrap = styled.div`
