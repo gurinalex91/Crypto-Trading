@@ -131,7 +131,7 @@ export const Background = styled.div`
         transparent 100%
       );
 
-    background-position: right center, left top, right -25rem top -75rem,
+    background-position: right center, left top, right -30rem top -80rem,
       right -37rem top 15rem, center top 35rem, left -37rem top 45rem,
       left -30rem bottom -120rem;
   }
@@ -143,7 +143,7 @@ export const Background = styled.div`
         transparent 100%
       ),
       radial-gradient(
-        ellipse 700px 600px,
+        ellipse 350px 200px,
         rgba(255, 255, 255, 0.1) 0%,
         transparent 100%
       ),

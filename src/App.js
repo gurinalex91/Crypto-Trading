@@ -16,7 +16,7 @@ function App() {
       <About />
       <PlatformDescription />
       <CardsSection />
-      <Decoration top="22rem" right="-35rem" />
+      <Decoration top="28rem" right="-35rem" />
       <Decoration top="80rem" right="55rem"/>
       <DecorationMobile top="-14rem" right="-5rem"/>
       <DecorationMobile top="57rem" right="5rem"/>
