@@ -136,8 +136,7 @@ export const Card = styled(motion.a)`
     }
   }
   &:hover {
-    transform: translateY(-4px);
-    border: 1px solid #cccccc;
+    border: 2px solid #cccccc;
     color: #3e53f8;
     box-shadow: 0px 0px 999px 999px rgba(0, 0, 0, 0.7);
     z-index: 1;
