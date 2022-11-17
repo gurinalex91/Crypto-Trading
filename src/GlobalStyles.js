@@ -275,7 +275,7 @@ export const Button = styled(motion.button)`
   transition: all 0.3s linear;
   &:hover {
     color: #3e53f8;
-    background: #ffffff;
+    background: linear-gradient(140.6deg, #ffffff 0%, #c1c6e7 100%);
   }
 `;
 
