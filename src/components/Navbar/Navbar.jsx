@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "../../GlobalStyles";
 
-import Burger from "./Burger";
 import {
   Header,
   HeaderWrap,
   Logo,
   LogoHovered,
+  BurgerWrap,
+  StyledBurger,
+  Blur,
   Navigation,
-  StyledUl,
+  NavigationMenu,
   StyledListItem,
   StyledLink,
   StyledLinkBtn,
@@ -16,6 +18,10 @@ import {
 import { LinkArrow } from "../../imports";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  document.body.style.overflow = open ? "hidden" : "visible";
+
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 66) {
@@ -41,9 +47,15 @@ const Navbar = () => {
             С<LogoHovered>rypto traiding</LogoHovered>
           </Logo>
 
-          <Burger />
-          <Navigation>
-            <StyledUl gap="45px">
+          <BurgerWrap>
+            <StyledBurger open={open} onClick={() => setOpen(!open)}>
+              <div />
+              <div />
+            </StyledBurger>
+          </BurgerWrap>
+          <Navigation open={open}>
+            <Blur open={open} />
+            <NavigationMenu>
               <StyledListItem>
                 <StyledLink href="/">Activities</StyledLink>
               </StyledListItem>
@@ -62,7 +74,7 @@ const Navbar = () => {
                   <LinkArrow />
                 </StyledLinkBtn>
               </StyledListItem>
-            </StyledUl>
+            </NavigationMenu>
           </Navigation>
         </HeaderWrap>
       </Container>

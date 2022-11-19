@@ -10,7 +10,7 @@ export const Header = styled(motion.header)`
   left: 0;
   z-index: 10;
   opacity: 0;
-  &.active{
+  &.active {
     background: #000;
     padding: 10px;
   }
@@ -49,23 +49,102 @@ export const Logo = styled.a`
   }
 `;
 
-export const Navigation = styled.nav`
+export const BurgerWrap = styled.div`
+  overflow: hidden;
+`;
+
+export const StyledBurger = styled.div`
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: calc(50% - 16px);
+  right: 20px;
+  z-index: 200;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  @media (max-width: 992px) {
+  justify-content: space-around;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  div {
+    width: 2rem;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transform-origin: 5px;
+    transition: all 0.2s;
+    &:first-child {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "")};
+    }
+    &:last-child {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "")};
+    }
+  }
+`;
+
+export const Blur = styled.div`
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  position: absolute;
+  @media (min-width: 992px) {
     display: none;
   }
 `;
 
-export const StyledUl = styled.ul`
+export const Navigation = styled.nav`
   display: flex;
-  justify-content: ${(props) => props.justifyContent || "space-between"};
-  gap: ${(props) => props.gap || ""};
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  @media (min-width: 992px) {
+    position: static;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    transform: translateX(0);
+  }
+`;
+
+export const NavigationMenu = styled.ul`
+  background-color: #000;
   width: 100%;
+  height: 100vh;
+  height: auto;
+  align-self: flex-end;
+  padding-top: 50px;
+  text-align: center;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   align-items: center;
-  @media (max-width: 992px) {
-    flex-direction: column;
+  min-height: 100vh;
+  @media (min-width: 576px) {
+    width: 50%;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+  @media (min-width: 992px) {
+    justify-content: space-between;
+    gap: 45px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    min-height: auto;
+    padding-top: 0;
   }
 `;
 
@@ -84,7 +163,7 @@ export const StyledLink = styled.a`
   border-bottom: 1px solid transparent;
   &:hover {
     color: #c7c7c7;
-    border-bottom: 1px solid #3E53F8;
+    border-bottom: 1px solid #3e53f8;
   }
   @media (min-width: 1700px) {
     font-size: 22px;
